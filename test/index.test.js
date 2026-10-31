@@ -93,7 +93,7 @@ test('css: fluid step 0 starts at minPx and grows to maxPx', () => {
 test('css: fluid steps keep the ratio between their endpoints', () => {
   const out = css({ base: 16, ratio: 1.25, steps: 3, fluid: true, minPx: 16, maxPx: 40, comments: false });
   const lines = out.split('\n');
-  // step 1 endpoint = step 0 endpoint × 1.25 → 1.25rem … 3.125rem
+  // step 1 endpoint = step 0 endpoint - 1.25 -> 1.25rem - 3.125rem
   assert.match(lines[1], /clamp\(1\.25rem, .+, 3\.125rem\)/);
 });
 

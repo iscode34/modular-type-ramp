@@ -138,8 +138,8 @@ export function css(options = {}) {
       .join('\n');
   }
 
-  // Each step keeps the scale's shape: step i is minPx·rⁱ at the small viewport
-  // and maxPx·rⁱ at the large one, so the ramp is fluid without breaking the ratio.
+  // Each step keeps the scale's shape: step i is minPx-r- at the small viewport
+  // and maxPx-r- at the large one, so the ramp is fluid without breaking the ratio.
   const baseForRatio = scaleOptions.base ?? 16;
   return steps
     .map((s) => {
@@ -148,7 +148,7 @@ export function css(options = {}) {
       const hi = Math.max(lo, round(maxPx * factor, 2));
       const f = fluid({ minPx: lo, maxPx: hi });
       const name = `${prefix}-${s.step < 0 ? `minus${Math.abs(s.step)}` : s.step}`;
-      return `${comments ? `/* ${s.step}: ${f.minRem}rem → ${f.maxRem}rem */ ` : ''}${name}: ${f.clamp};`;
+      return `${comments ? `/* ${s.step}: ${f.minRem}rem -> ${f.maxRem}rem */ ` : ''}${name}: ${f.clamp};`;
     })
     .join('\n');
 }

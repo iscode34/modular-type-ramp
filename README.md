@@ -1,6 +1,10 @@
 # modular-type-ramp
 
-Generate a **modular type scale** and **fluid `clamp()`** sizes — deterministically, with no dependencies, no build step, and no runtime CSS parsing.
+[![npm version](https://img.shields.io/npm/v/modular-type-ramp.svg)](https://www.npmjs.com/package/modular-type-ramp)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![tests](https://github.com/iscode34/modular-type-ramp/actions/workflows/ci.yml/badge.svg)](https://github.com/iscode34/modular-type-ramp/actions/workflows/ci.yml)
+
+Generate a **modular type scale** and **fluid `clamp()`** sizes - deterministically, with no dependencies, no build step, and no runtime CSS parsing.
 
 A modular scale is a sequence of sizes built from one base size and one ratio (`16 × 1.25ⁿ`). It is how print designers kept hierarchy consistent for a century; on the web it is also the easiest way to stop inventing `13px`, `15px` and `17px` by accident.
 
@@ -94,10 +98,10 @@ npx type-ramp --help
 
 ```
 $ npx type-ramp --base 16 --ratio 1.25 --steps 4
-modular scale · base 16px · ratio 1.25 · 4 steps
+modular scale - base 16px - ratio 1.25 - 4 steps
 
 step  px     rem
-────  ─────  ───────
+----  -----  -------
 0     16.00  1.0000
 1     20.00  1.2500
 2     25.00  1.5625

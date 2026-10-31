@@ -51,7 +51,7 @@ export interface CssOptions extends ScaleOptions {
   comments?: boolean;
 }
 
-/** Build a modular scale (base × ratio^step). */
+/** Build a modular scale (base - ratio^step). */
 export function scale(options?: ScaleOptions): ScaleStep[];
 
 /** Produce a fluid clamp() between two sizes over a viewport range. */

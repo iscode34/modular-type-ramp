@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { scale, fluid, css } from '../src/index.js';
+import { scale, fluid, css } from './src/index.js';
 
-const HELP = `type-ramp — modular type scale + fluid clamp() generator
+const HELP = `type-ramp -?--?- modular type scale + fluid clamp() generator
 
 Usage
   type-ramp [options]
@@ -95,10 +95,10 @@ function main() {
     const widths = header.map((h, i) => Math.max(h.length, ...body.map((r) => r[i].length)));
     const line = (cells) => cells.map((c, i) => c.padEnd(widths[i])).join('  ').trimEnd();
 
-    console.log(`modular scale · base ${options.base}px · ratio ${options.ratio} · ${rows.length} steps`);
+    console.log(`modular scale | base ${options.base}px | ratio ${options.ratio} | ${rows.length} steps`);
     console.log('');
     console.log(line(header));
-    console.log(line(widths.map((w) => '─'.repeat(w))));
+    console.log(line(widths.map((w) => '-'.repeat(w))));
     for (const row of body) console.log(line(row));
     console.log('');
     console.log(`fluid example  ${fluid({ minPx: options.base, maxPx: options.base * options.ratio ** 3 }).clamp}`);
