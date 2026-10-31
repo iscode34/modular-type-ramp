@@ -1,0 +1,51 @@
+{
+  "name": "modular-type-ramp",
+  "version": "1.0.0",
+  "description": "Generate a modular type scale and fluid clamp() sizes. Zero dependencies, ESM, typed, with a CLI.",
+  "keywords": [
+    "typography",
+    "type-scale",
+    "modular-scale",
+    "fluid-type",
+    "clamp",
+    "css",
+    "design-tokens",
+    "design-system"
+  ],
+  "license": "MIT",
+  "author": "Mohammad Istahad Alam Chowdhury <iacadem7@gmail.com>",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "bin": {
+    "type-ramp": "./bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "demo": "node bin/cli.js --base 16 --ratio 1.25 --steps 6",
+    "prepublishOnly": "npm test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iscode34/modular-type-ramp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iscode34/modular-type-ramp/issues"
+  },
+  "homepage": "https://github.com/iscode34/modular-type-ramp#readme"
+}
