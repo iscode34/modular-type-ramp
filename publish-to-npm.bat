@@ -45,7 +45,7 @@ if errorlevel 1 goto :fail
 
 echo.
 echo [3/3] Verifying the published package...
-call npx --yes modular-type-ramp --steps 3
+call npx --yes -p modular-type-ramp type-ramp --steps 3
 
 echo.
 echo ============================================================
