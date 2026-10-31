@@ -17,4 +17,4 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: node --test
-      - run: node bin/cli.js --css --fluid
+      - run: node cli.js --css --fluid

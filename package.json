@@ -24,17 +24,17 @@
     }
   },
   "bin": {
-    "type-ramp": "./bin/cli.js"
+    "type-ramp": "cli.js"
   },
   "files": [
     "src",
-    "bin",
+    "cli.js",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
     "test": "node --test",
-    "demo": "node bin/cli.js --base 16 --ratio 1.25 --steps 6",
+    "demo": "node cli.js --base 16 --ratio 1.25 --steps 6",
     "prepublishOnly": "npm test"
   },
   "engines": {
